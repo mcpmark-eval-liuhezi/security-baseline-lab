@@ -1,0 +1,14 @@
+name: audit-baseline-ci
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+      - name: Greet the reviewer
+        run: echo "Hello from the security baseline lab CI"
